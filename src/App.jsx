@@ -68,7 +68,7 @@ function App() {
 
     return (
         <div className="container">
-            <h1 className="app-title">Meme search</h1>
+            <h1 className="app-title">Images search</h1>
             <div className="search-field">
                 <input
                     type="text"
@@ -91,7 +91,7 @@ function App() {
                     />
                 </svg>
             </div>
-            {isLoading && <Loading />}
+
             {images.length > 0 && (
                 <ul className="images">
                     {images.map((image) => {
@@ -105,6 +105,7 @@ function App() {
                     })}
                 </ul>
             )}
+            {isLoading && <Loading />}
             {error && <span className="error">{error}</span>}
         </div>
     );
